@@ -15,7 +15,7 @@ class _AddPlaceScreenState extends ConsumerState<AddPlaceScreen> {
   final _titleController = TextEditingController();
 
   void _savePlace() {
-    final enteredTitle = _titleController.text;
+    final enteredTitle = _titleController.text; // textController ensures to recieve something even if an empty string, so never null
 
     if (enteredTitle.isEmpty) {
       return;
